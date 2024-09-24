@@ -27,6 +27,7 @@ local Blur = Instance.new("BlurEffect")
 local DefaultLayoutOrder = 0
 
 task.spawn(function()
+		print("Alsolara Loaded")
 	AlSploit.Name = "AlSploit"
 	AlSploit.Parent = LocalPlayer:WaitForChild("PlayerGui")
 	AlSploit.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
