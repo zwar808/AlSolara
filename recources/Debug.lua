@@ -1,55 +1,39 @@
 local debug = {}
-
 local upvaluesRegistry = {}
 
+local function getFunc(modulePath, funcName)
+    local success, module = pcall(require, modulePath)
+    if success and type(module[funcName]) == "function" then
+        return module[funcName]
+    end
+end
+
 function debug.getupvalue(modulePath, funcName, index)
-    local status, module = pcall(require, modulePath)
-    if not status then
-        error("Failed to require module: " .. tostring(modulePath))
+    local func = getFunc(modulePath, funcName)
+    if func then
+        local upvalues = debug.getupvalues(func)
+        if index and index > 0 and index <= #upvalues then
+            return upvalues[index]
+        end
     end
-
-    local func = module[funcName]
-    if not func or type(func) ~= "function" then
-        error("The function " .. tostring(funcName) .. " is not valid in the required module")
-    end
-
-    local upvalues = debug.getupvalues(func)
-    if index and index > 0 and index <= #upvalues then
-        return upvalues[index]
-    end
-    error("Invalid index or upvalue does not exist")
+    return nil
 end
 
 function debug.setupvalues(func, upvalues)
-    if type(func) ~= "function" then
-        error("Argument must be a function")
+    if type(func) == "function" then
+        upvaluesRegistry[func] = upvalues
     end
-    upvaluesRegistry[func] = upvalues
 end
 
 function debug.getupvalues(func)
-    if type(func) ~= "function" then
-        error("Argument must be a function")
+    if type(func) == "function" then
+        return upvaluesRegistry[func] or {}
     end
-    return upvaluesRegistry[func] or {}
+    return {}
 end
 
 function debug.getupvalue3(modulePath, funcName, index)
-    local status, module = pcall(require, modulePath)
-    if not status then
-        error("Failed to require module: " .. tostring(modulePath))
-    end
-
-    local func = module[funcName]
-    if not func or type(func) ~= "function" then
-        error("The function " .. tostring(funcName) .. " is not valid in the required module")
-    end
-
-    local upvalues = debug.getupvalues(func)
-    if index and index > 0 and index <= #upvalues then
-        return upvalues[index]
-    end
-    error("Invalid index or upvalue does not exist")
+    return debug.getupvalue(modulePath, funcName, index)
 end
 
 return debug
