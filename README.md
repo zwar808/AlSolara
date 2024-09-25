@@ -1,4 +1,4 @@
-# AlSolara
+# Alsolara (Discontinued Until 2024 October 1st)
 
 All **Credits** to:
 Stars.Space, GODCLUTCHER, cr1tcal3
