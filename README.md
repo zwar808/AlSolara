@@ -1,11 +1,9 @@
 # AlSolara
 
-All Credits to:
-Stars.Space
-GODCLUTCHER
-cr1tcal3
+All **Credits** to:
+Stars.Space, GODCLUTCHER, cr1tcal3
 
-Preview:
+## Preview of using on Solara:
 
 ![image](https://github.com/user-attachments/assets/764b1a86-d0a2-4cba-af42-d221ac02eaab)
 
