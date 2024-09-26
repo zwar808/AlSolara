@@ -1833,7 +1833,6 @@ local function FindNearestEntity(MaxDistance)
 			end
 		end
 	end)
-	task.spawn(function()
 	
 										
 
