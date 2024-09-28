@@ -21,4 +21,6 @@ _G.Asolara_Loadstring_Roblox;
 _G.AlsolaraNew_lua;
 _G.README_md;
 }
+
 local Owner = "zwar808"
+local Library = {}
