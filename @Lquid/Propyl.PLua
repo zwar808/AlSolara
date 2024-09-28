@@ -1,5 +1,6 @@
 -- Generated With Propyl Lua --
 -- Open Source. Configuration Library --
+-- ARCHIVED --
 local github = "https://github.com/zwar808/AlSolara/"
 local contributers = {}
 local existing = {
