@@ -1,0 +1,24 @@
+-- Generated With Propyl Lua --
+-- Open Source. Configuration Library --
+local github = "https://github.com/zwar808/AlSolara/"
+local contributers = {}
+local existing = {
+_G.p40Liquid;
+_G.p40Liquid.LICENSE;
+
+_G.Alsploit;
+_G.Alsploit.Modified_lua;
+
+_G.for_contributers;
+_G.for_contributers.TODO_txt;
+
+_G.recources;
+_G.recources.Debug_lua;
+_G.recources.Drawing_lua;
+
+_G.AlsolaraOLD_lua;
+_G.Asolara_Loadstring_Roblox;
+_G.AlsolaraNew_lua;
+_G.README_md;
+}
+local Owner = "zwar808"
