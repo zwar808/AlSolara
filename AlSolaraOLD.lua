@@ -12,7 +12,7 @@ local TextLabel_2 = Instance.new("TextLabel")
 --Properties:
 
 CleanGui.Name = "CleanGui"
-CleanGui.Parent = game.StarterGui
+CleanGui.Parent = game.Players.LocalPlayer.PlayerGui
 CleanGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 BlurTextDark.Name = "BlurTextDark"
